@@ -153,13 +153,18 @@ const LANGS = ["tr", "en", "pl", "fr"];
 
 const styles = {
   wrap: {
-    maxWidth: 480,
-    margin: "0 auto",
-    minHeight: "100vh",
-    fontFamily: "'Inter', 'Segoe UI', sans-serif",
-    background: "#0F0F0F",
-    color: "#F5F5F5",
-  },
+  width: "100%",
+  maxWidth: "100%",
+  minWidth: 0,
+  overflowX: "hidden",
+  margin: 0,
+  padding: 0,
+  minHeight: "100vh",
+  boxSizing: "border-box",
+  fontFamily: "'Inter', 'Segoe UI', sans-serif",
+  background: "#0F0F0F",
+  color: "#F5F5F5",
+},
 
   /* HERO */
   hero: {
@@ -392,6 +397,7 @@ export default function ArastaMenu() {
   const items = MENU_ITEMS.filter((i) => i.cat === activeCat);
 
   return (
+    
     <div style={styles.wrap}>
       {/* Hero */}
       <div style={styles.hero}>
